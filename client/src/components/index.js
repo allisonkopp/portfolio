@@ -5,3 +5,4 @@ export { default as Projects } from './Projects';
 export { default as CardLayout } from './CardLayout';
 export { default as Technologies } from './Technologies';
 export { default as ModalLayout } from './Modal';
+export { default as Animate } from './Animate';
