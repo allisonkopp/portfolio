@@ -1,11 +1,10 @@
 import React from 'react';
-import anime from 'animejs';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link, withRouter } from 'react-router-dom';
 import './Heading.scss';
-import $ from 'jquery';
 
 import WORKSPACE from '../../assets/images/workspace.jpg';
-
-const heading = 'SOFTWARE ENGINEER';
 
 const Heading = props => (
   <div className="container">
@@ -18,11 +17,15 @@ const Heading = props => (
       <h3>and I am a</h3>
       <h1>Software Developer</h1>
       <div className="btn-container">
-        <button className="btn draw-border">About</button>
-        <button className="btn draw-border">Projects</button>
+        <AnchorLink href="#about">
+          <button className="btn draw-border">About</button>
+        </AnchorLink>
+        <AnchorLink href="#projects">
+          <button className="btn draw-border">Projects</button>
+        </AnchorLink>
       </div>
     </div>
   </div>
 );
 
-export default Heading;
+export default withRouter(Heading);
